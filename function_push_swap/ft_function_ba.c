@@ -6,7 +6,7 @@
 /*   By: npalissi <npalissi@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 18:37:13 by npalissi          #+#    #+#             */
-/*   Updated: 2024/12/11 12:46:57 by npalissi         ###   ########.fr       */
+/*   Updated: 2024/12/11 22:54:42 by npalissi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	rba(t_list **pile)
 {
 	t_list	*tmp;
 
-	if (ft_lstsize(*pile) == 1)
+	if (ft_lstsize(*pile) <= 1)
 		return (0);
 	tmp = *pile;
 	*pile = tmp->next;

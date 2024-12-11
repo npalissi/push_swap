@@ -6,7 +6,7 @@
 /*   By: npalissi <npalissi@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 22:12:24 by edubois-          #+#    #+#             */
-/*   Updated: 2024/12/11 16:29:56 by npalissi         ###   ########.fr       */
+/*   Updated: 2024/12/11 23:15:40 by npalissi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,13 +34,23 @@ int	delete_zero(char *s)
 	return (0);
 }
 
+int	ft_has_num(char *str)
+{
+	while (*str)
+	{
+		if (ft_isdigit(*str++))
+			return (1);
+	}
+	return (0);
+}
+
 int	get_stack(char *str, t_list **stack)
 {
 	int		overflow;
 	int		nb;
 
 	nb = 0;
-	if (!str || ft_strlen(str) == 0)
+	if (!str || ft_strlen(str) == 0 || !ft_has_num(str))
 		clean_exit(*stack, 1);
 	while (str && *str)
 	{

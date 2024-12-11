@@ -6,7 +6,7 @@
 /*   By: npalissi <npalissi@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 14:00:07 by edubois-          #+#    #+#             */
-/*   Updated: 2024/12/11 16:32:07 by npalissi         ###   ########.fr       */
+/*   Updated: 2024/12/11 22:58:51 by npalissi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int	make_moov(t_data *data, char *s)
 	else if (ft_strcmp("rrb\n", s))
 		rrb(data, 0);
 	else
-		return (0);
+		clean_exit_bonus(data->stack_a, 2);
 	return (1);
 }
 
